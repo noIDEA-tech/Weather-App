@@ -8,14 +8,14 @@ dotenv.config();
 import routes from './routes/index.js';
 
 const app = express();
-// const PORT = process.env.PORT || 3001;
-const PORT = process.env.NODE_ENV === 'production' ? process.env.PORT : 3001;
+const PORT = process.env.PORT || 3001;
+// const PORT = process.env.NODE_ENV === 'production' ? process.env.PORT : 3001;
 
 // TODO: Serve static files of entire client dist folder
 //VERIFY ROUTE TO client/dist!!
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../../client/dist')));
-}
+// if (process.env.NODE_ENV === 'production') {
+app.use(express.static(path.join(__dirname, '../../client/dist')));
+
 // TODO: Implement middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
