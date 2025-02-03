@@ -45,7 +45,7 @@ class WeatherService {
   constructor() {
     this.baseURL = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}";
     this.geoURL = "http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}";
-    this.apiKey = process.env.WEATHER_API_KEY || '';
+    this.apiKey = process.env._API_KEY || '';
     this.cityName = '';
     this.cityId = '';
   }
