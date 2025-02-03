@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ES2020",        // Different from root - needed for Node.js
-    "moduleResolution": "node",  // Different from root - needed for Node.js
+    "module": "ES2020",  // Changed back to ES2020
+    "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
@@ -13,4 +13,4 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
-//modified feb 2 njw
+//modified feb 3 njw
